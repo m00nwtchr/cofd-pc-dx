@@ -2,11 +2,11 @@ use cofd::prelude::werewolf::Auspice;
 use dioxus::prelude::*;
 
 #[component]
-pub fn Info() -> Element {
+pub fn Info(class: String) -> Element {
 	let mut xsplat = use_signal(|| String::new());
 
 	rsx! {
-		div { class: "grid grid-cols-9 gap-2 p-4 w-full",
+		div { class: "grid grid-cols-3 sm:grid-cols-9 gap-2 p-4 w-full {class}",
 			// Row 1
 			label { class: "col-span-1 text-sm font-semibold self-center", "Name:" }
 			input { class: "col-span-2 border p-1 rounded", r#type: "text" }

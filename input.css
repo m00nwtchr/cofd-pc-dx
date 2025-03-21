@@ -1,12 +1,38 @@
 @import "tailwindcss";
 
 @source "/src/**/*.{rs,html,css}";
-@source "/dist/**/*.html";
 
 @theme {
-    --font-sans: InterVariable, "sans-serif";
+  --font-sans: InterVariable, "sans-serif";
 }
 
-/*body {*/
-/*    @apply bg-black;*/
-/*}*/
+:root {
+  --splat-accent: black;
+  @variant werewolf {
+    --splat-accent: var(--color-amber-900);
+  }
+  @variant mage {
+    --splat-accent: var(--color-blue-600);
+  }
+}
+
+@theme inline {
+  --color-accent: var(--splat-accent);
+}
+
+@custom-variant mortal (&:where([data-theme="mortal"], [data-theme="mortal"] *));
+@custom-variant mage (&:where([data-theme="mage"], [data-theme="mage"] *));
+@custom-variant vampire (&:where([data-theme="vampire"], [data-theme="vampire"] *));
+@custom-variant werewolf (&:where([data-theme="werewolf"], [data-theme="werewolf"] *));
+@custom-variant promethean (&:where([data-theme="promethean"], [data-theme="promethean"] *));
+@custom-variant changeling (&:where([data-theme="changeling"], [data-theme="changeling"] *));
+@custom-variant hunter (&:where([data-theme="hunter"], [data-theme="hunter"] *));
+@custom-variant bound (&:where([data-theme="bound"], [data-theme="bound"] *));
+@custom-variant mummy (&:where([data-theme="mummy"], [data-theme="mummy"] *));
+@custom-variant demon (&:where([data-theme="demon"], [data-theme="demon"] *));
+@custom-variant beast (&:where([data-theme="beast"], [data-theme="beast"] *));
+@custom-variant deviant (&:where([data-theme="deviant"], [data-theme="deviant"] *));
+
+body {
+  overflow-x: hidden;
+}

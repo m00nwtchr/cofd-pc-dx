@@ -2,3 +2,4 @@
 channel = "nightly"
 profile = "minimal"
 components = ["rust-src"]
+targets = ["wasm32-unknown-unknown"]
