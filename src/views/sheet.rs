@@ -25,7 +25,7 @@ pub fn Sheet(id: usize) -> Element {
 
 			div { class: "grid grid-cols-subgrid grid-rows-subgrid p-4 text-center col-span-1 sm:col-start-[3] sm:col-end-[-1] row-span-2",
 				h2 { class: "text-lg font-bold col-span-full", "Other Traits" }
-				div { class: "col-span-full grid grid-cols-2",
+				div { class: "col-span-full grid grid-cols-1 sm:grid-cols-2",
 					div { class: "col-span-1 row-span-8 grid grid-cols-1 grid-rows-subgrid",
 						div { class: "row-span-4 col-span-full",
 							h3 { class: "text-md font-bold w-full", "Merits" }
