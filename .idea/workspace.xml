@@ -14,7 +14,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81f1585b-eb8e-4e5f-b2ae-d66c29241ee1" name="Changes" comment="" />
+    <list default="true" id="81f1585b-eb8e-4e5f-b2ae-d66c29241ee1" name="Changes" comment="s">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/tailwind.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +34,9 @@
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="lkXOwKHQ" />
   </component>
@@ -43,29 +49,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cargo.Expand cofd_pc::views::sheet.executor": "Run",
-    "Cargo.Run cofd-pc.executor": "Run",
-    "Cargo.Run desktop.executor": "Run",
-    "Cargo.Test cofd-pc.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "last_opened_file_path": "/home/m00n/Dokumenty/Projects/cofd/cofd-pc/src/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "org.rust.disableDetachedFileInspection/home/m00n/Dokumenty/Projects/cofd/cofd-pc/build.rs": "true",
-    "org.rust.disableDetachedFileInspection/home/m00n/Dokumenty/Projects/cofd/cofd-pc/src/views/home.rs": "true",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "language.rust.rustfmt",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cargo.Expand cofd_pc::views::sheet.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Run cofd-pc.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Run desktop.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test cofd-pc.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/m00n/Dokumenty/Projects/cofd/cofd-pc/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.disableDetachedFileInspection/home/m00n/Dokumenty/Projects/cofd/cofd-pc/build.rs&quot;: &quot;true&quot;,
+    &quot;org.rust.disableDetachedFileInspection/home/m00n/Dokumenty/Projects/cofd/cofd-pc/src/views/home.rs&quot;: &quot;true&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.rustfmt&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
@@ -164,10 +172,25 @@
       <workItem from="1742311989887" duration="6000" />
       <workItem from="1742313005166" duration="2351000" />
       <workItem from="1742315636789" duration="13119000" />
+      <workItem from="1742644659313" duration="1387000" />
+      <workItem from="1743425280039" duration="334000" />
     </task>
+    <task id="LOCAL-00001" summary="s">
+      <option name="closed" value="true" />
+      <created>1742645733324</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742645733324</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="s" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
   </component>
 </project>
