@@ -7,7 +7,7 @@ edition = "2021"
 [dependencies]
 dioxus = { version = "0.6", features = ["router"] }
 cofd = { git = "https://github.com/m00nwtchr/cofd.git", branch = "systema" }
-strum = "*"
+strum = "0.27"
 
 [features]
 default = ["desktop"]
