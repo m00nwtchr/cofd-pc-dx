@@ -8,6 +8,7 @@ edition = "2021"
 dioxus = { version = "0.6", features = ["router"] }
 cofd = { git = "https://github.com/m00nwtchr/cofd.git", branch = "systema" }
 strum = "0.27"
+env_logger = "0.11.7"
 
 [features]
 default = ["desktop"]
