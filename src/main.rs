@@ -12,6 +12,7 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 
 fn main() {
+	env_logger::init();
 	LaunchBuilder::new()
 		.with_cfg(desktop! {
 			#[cfg(feature = "desktop")]

@@ -3,7 +3,7 @@ use dioxus::prelude::*;
 
 #[component]
 pub fn Info(class: String) -> Element {
-	let mut xsplat = use_signal(|| String::new());
+	let mut xsplat = use_signal(String::new);
 
 	rsx! {
 		div { class: "grid grid-cols-3 sm:grid-cols-9 gap-2 p-4 w-full {class}",

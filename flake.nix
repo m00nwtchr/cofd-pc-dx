@@ -6,6 +6,11 @@
     flake-utils.url = "github:numtide/flake-utils";
     rust-overlay.url = "github:oxalica/rust-overlay";
     rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
+    advisory-db = {
+      url = "github:rustsec/advisory-db";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -14,7 +19,7 @@
     crane,
     flake-utils,
     rust-overlay,
-    android,
+    advisory-db,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -24,11 +29,7 @@
       };
       inherit (pkgs) lib;
 
-      # rustToolchainFor = p: (p.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml);
-      rustToolchainFor = p:
-        p.rust-bin.selectLatestNightlyWith (
-          t: t.default
-        );
+      rustToolchainFor = p: p.rust-bin.selectLatestNightlyWith (t: t.default);
       rustDevToolchainFor = p:
         (rustToolchainFor p).override {
           extensions = ["rust-src" "rust-analyzer"];
@@ -107,6 +108,11 @@
         cofd-pc-clippy = craneLib.cargoClippy (commonArgs
           // {
             inherit cargoArtifacts;
+
+            preBuild = ''
+              touch assets/tailwind.css
+            '';
+
             cargoClippyExtraArgs = "--all-targets -- --deny warnings";
           });
 
@@ -115,6 +121,12 @@
           inherit src;
         };
 
+        # Audit dependencies
+        cofd-pc-audit = craneLib.cargoAudit {
+          inherit src advisory-db;
+        };
+
+        # Audit licenses
         cofd-pc-deny = craneLib.cargoDeny {
           inherit src;
         };

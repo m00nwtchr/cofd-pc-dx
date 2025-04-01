@@ -1,6 +1,5 @@
-use cofd::{prelude::VariantName, schema::traits::skill};
+use cofd::prelude::VariantName;
 use dioxus::prelude::*;
-use strum::VariantArray;
 
 use crate::components::dot_rating::DotRating;
 
