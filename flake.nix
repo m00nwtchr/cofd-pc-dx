@@ -33,6 +33,7 @@
         p.rust-bin.selectLatestNightlyWith (t:
           t.minimal.override {
             extensions = ["clippy" "rustfmt"];
+            targets = ["wasm32-unknown-unknown"];
           });
       rustDevToolchainFor = p:
         (rustToolchainFor p).override {
