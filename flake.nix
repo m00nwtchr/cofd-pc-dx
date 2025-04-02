@@ -29,10 +29,14 @@
       };
       inherit (pkgs) lib;
 
-      rustToolchainFor = p: p.rust-bin.selectLatestNightlyWith (t: t.default);
+      rustToolchainFor = p:
+        p.rust-bin.selectLatestNightlyWith (t:
+          t.minimal.override {
+            extensions = ["clippy" "rustfmt"];
+          });
       rustDevToolchainFor = p:
         (rustToolchainFor p).override {
-          extensions = ["rust-src" "rust-analyzer"];
+          extensions = ["rust-docs" "rust-src" "rust-analyzer"];
         };
 
       craneLib = (crane.mkLib pkgs).overrideToolchain rustToolchainFor;
