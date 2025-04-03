@@ -10,7 +10,7 @@ fn Merit(name: String, value: Signal<u8>) -> Element {
 			option {value: "D", "D"}
 		}
 		DotRating { class: "col-span-1",
-			value, max: 5 }
+			value, range: 0..=5 }
 	}
 }
 

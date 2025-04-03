@@ -3,6 +3,7 @@
 use dioxus::prelude::*;
 
 mod components;
+mod hooks;
 mod router;
 mod views;
 
@@ -12,7 +13,11 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 
 fn main() {
+	#[cfg(not(target_arch = "wasm32"))]
 	env_logger::init();
+	#[cfg(target_arch = "wasm32")]
+	console_log::init_with_level(log::Level::Info).expect("Failed to initialize logger");
+
 	LaunchBuilder::new()
 		.with_cfg(desktop! {
 			#[cfg(feature = "desktop")]

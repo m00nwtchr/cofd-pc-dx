@@ -1,3 +1,7 @@
+use cofd::{
+	prelude::{Attribute::*, Skill::*, werewolf::*, *},
+	splat::SplatCharacter,
+};
 use dioxus::prelude::*;
 
 use crate::components::{Attributes, BoxRating, DotRating, Info, Merits, Skills};
@@ -5,6 +9,48 @@ use crate::components::{Attributes, BoxRating, DotRating, Info, Merits, Skills};
 #[component]
 pub fn Sheet(id: usize) -> Element {
 	let val = use_signal(|| 1);
+
+	let c = use_signal(|| {
+		SplatCharacter::Werewolf(
+			Character::builder()
+				.with_splat(
+					Werewolf::new()
+						.with_auspice(Auspice::Rahu)
+						.with_tribe(ForsakenTribe::BloodTalons),
+				)
+				// .with_info(CharacterInfo {
+				// 	name: String::from("Amos Gray"),
+				// 	player: String::from("m00n"),
+				// 	virtue_anchor: String::from("Destroyer"),
+				// 	vice_anchor: String::from("Lone Wolf"),
+				// 	..Default::default()
+				// })
+				.with_attributes(vec![
+					(Intelligence, 1),
+					(Wits, 3),
+					(Resolve, 2),
+					(Strength, 3),
+					(Dexterity, 2),
+					(Stamina, 3),
+					(Presence, 3),
+					(Manipulation, 1),
+					(Composure, 3),
+				])
+				.with_skills(vec![
+					(Investigation, 2),
+					(Medicine, 2),
+					(Athletics, 2),
+					(Brawl, 4),
+					(Stealth, 2),
+					(Survival, 3),
+					(Expression, 3),
+					(Intimidation, 4),
+				])
+				.build(),
+		)
+	});
+
+	let character = use_context_provider(|| c);
 
 	rsx! {
 		main {
@@ -55,23 +101,23 @@ pub fn Sheet(id: usize) -> Element {
 					div { class: "col-span-1 row-span-8 grid grid-cols-1 grid-rows-subgrid",
 						div { class: "row-span-1 col-span-full",
 							h3 { class: "text-md font-bold w-full", "Health" }
-							BoxRating { class: "justify-center", value: val, max: 10 }
+							BoxRating { class: "justify-center", value: val, range: 0..=10 }
 						}
 
 						div { class: "row-span-1 col-span-full",
 							h3 { class: "text-md font-bold w-full", "Willpower" }
-							DotRating { class: "justify-center", value: val, max: 10 }
-							BoxRating { class: "justify-center", value: val, max: 10 }
+							DotRating { class: "justify-center", value: val, range: 0..=10 }
+							BoxRating { class: "justify-center", value: val, range: 0..=10 }
 						}
 
 						div { class: "row-span-1 col-span-full",
 							h3 { class: "text-md font-bold w-full", "Primal Urge" }
-							DotRating { class: "justify-center", value: val, max: 10 }
+							DotRating { class: "justify-center", value: val, range: 0..=10 }
 						}
 
 						div { class: "row-span-1 col-span-full",
 							h3 { class: "text-md font-bold w-full", "Essence" }
-							BoxRating { class: "justify-center", value: val, max: 10 }
+							BoxRating { class: "justify-center", value: val, range: 0..=10 }
 						}
 
 						div { class: "row-span-4 col-span-full grid grid-cols-1",
