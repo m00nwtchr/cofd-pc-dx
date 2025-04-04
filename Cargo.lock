@@ -389,9 +389,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.17"
+version = "1.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fcb57c740ae1daf453ae85f16e37396f672b039e00d9d866e07ddb24e328e3a"
+checksum = "525046617d8376e3db1deffb079e91cef90a89fc3ca5c185bbf8c9ecdd15cd5c"
 dependencies = [
  "shlex",
 ]
@@ -534,7 +534,7 @@ dependencies = [
 [[package]]
 name = "cofd"
 version = "0.1.0"
-source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#48fee722f54483de3a7edf6f64f5176c51fdd200"
+source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#6c77d20f4726f46a26678d957e964abb03174843"
 dependencies = [
  "cofd-macros",
  "cofd-schema",
@@ -549,7 +549,7 @@ dependencies = [
 [[package]]
 name = "cofd-derive"
 version = "0.1.0"
-source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#48fee722f54483de3a7edf6f64f5176c51fdd200"
+source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#6c77d20f4726f46a26678d957e964abb03174843"
 dependencies = [
  "convert_case 0.8.0",
  "proc-macro2",
@@ -560,7 +560,7 @@ dependencies = [
 [[package]]
 name = "cofd-macros"
 version = "0.1.0"
-source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#48fee722f54483de3a7edf6f64f5176c51fdd200"
+source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#6c77d20f4726f46a26678d957e964abb03174843"
 dependencies = [
  "cofd-schema",
  "convert_case 0.8.0",
@@ -585,7 +585,7 @@ dependencies = [
 [[package]]
 name = "cofd-schema"
 version = "0.1.0"
-source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#48fee722f54483de3a7edf6f64f5176c51fdd200"
+source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#6c77d20f4726f46a26678d957e964abb03174843"
 dependencies = [
  "chrono",
  "cofd-util",
@@ -599,7 +599,7 @@ dependencies = [
 [[package]]
 name = "cofd-util"
 version = "0.1.0"
-source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#48fee722f54483de3a7edf6f64f5176c51fdd200"
+source = "git+https://github.com/m00nwtchr/cofd.git?branch=systema#6c77d20f4726f46a26678d957e964abb03174843"
 dependencies = [
  "cofd-derive",
 ]
@@ -1596,9 +1596,9 @@ checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
 name = "errno"
-version = "0.3.10"
+version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "33d852cb9b869c2a9b3df2f71a3074817f01e1844f839a144f5fcef059a4eb5d"
+checksum = "976dd42dc7e85965fe702eb8164f21f450704bdde31faefd6471dba214cb594e"
 dependencies = [
  "libc",
  "windows-sys 0.59.0",
@@ -2907,9 +2907,9 @@ dependencies = [
 
 [[package]]
 name = "miniz_oxide"
-version = "0.8.6"
+version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "29c72f6929239626840b28f919ce8981a317fc5dc63ce25c30d2ab372f94886f"
+checksum = "ff70ce3e48ae43fa075863cef62e8b43b71a4f2382229920e0df362592919430"
 dependencies = [
  "adler2",
  "simd-adler32",

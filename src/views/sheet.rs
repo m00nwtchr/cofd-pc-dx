@@ -1,4 +1,5 @@
 use cofd::{
+	character::info::CharacterInfo,
 	prelude::{Attribute::*, Skill::*, werewolf::*, *},
 	splat::SplatCharacter,
 };
@@ -18,13 +19,13 @@ pub fn Sheet(id: usize) -> Element {
 						.with_auspice(Auspice::Rahu)
 						.with_tribe(ForsakenTribe::BloodTalons),
 				)
-				// .with_info(CharacterInfo {
-				// 	name: String::from("Amos Gray"),
-				// 	player: String::from("m00n"),
-				// 	virtue_anchor: String::from("Destroyer"),
-				// 	vice_anchor: String::from("Lone Wolf"),
-				// 	..Default::default()
-				// })
+				.with_info(CharacterInfo {
+					name: String::from("Amos Gray"),
+					player: String::from("m00n"),
+					virtue_anchor: String::from("Destroyer"),
+					vice_anchor: String::from("Lone Wolf"),
+					..Default::default()
+				})
 				.with_attributes(vec![
 					(Intelligence, 1),
 					(Wits, 3),
